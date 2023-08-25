@@ -11,9 +11,16 @@ public class strings {
         System.out.println("Choose a word to search for!");
         String chosenWord = input.nextLine().toLowerCase();
         System.out.println(chosenWord);
+        int indexOfWord = sentence.indexOf(chosenWord);
+        int lengthOfWord = chosenWord.length();
+
         if(sentence.toLowerCase().contains(chosenWord)) {
             System.out.println("True");
+            System.out.println("Your search term first appears at index " + indexOfWord + " and is " +lengthOfWord+ " characters long.");
+            String modifiedSentence = sentence.replace(chosenWord, "");
+            System.out.println(modifiedSentence);
         }
+
         else{
             System.out.println("False");
             }
