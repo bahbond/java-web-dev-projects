@@ -11,7 +11,8 @@ public class Student {
                 this.studentId = studentId;
                 this.numberOfCredits = numberOfCredits;
                 this.gpa = gpa;
-
+//return "Student Name: " +name+ "Student ID: " +studentId+ "Number of Credits: " +numberOfCredits+
+ //       "Grade Point Average: " +gpa;
         }
 
         public Student(String name, int studentId) {
