@@ -43,7 +43,7 @@ public class Student {
     //  than just the class fields.
 
     // TODO: Add your custom 'equals' method here. Consider which fields should match in order to call two
-    //  Student objects equal.
+    //  org.launchcode.Student objects equal.
 
     public String getName() {
         return name;
@@ -79,7 +79,7 @@ public class Student {
 
     public static void main(String[] args) {
         Student sally = new Student("Sally",1,1,4.0);
-        System.out.println("The Student class works! " + sally.getName() + " is a student!");
+        System.out.println("The org.launchcode.Student class works! " + sally.getName() + " is a student!");
         System.out.println(sally);
         sally.addGrade(12, 3.5);
         System.out.println(sally);

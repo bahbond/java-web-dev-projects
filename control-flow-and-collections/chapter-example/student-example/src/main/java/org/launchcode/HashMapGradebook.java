@@ -15,7 +15,7 @@ public class HashMapGradebook {
         // Get student names and grades
         do {
 
-            System.out.print("Student: ");
+            System.out.print("org.launchcode.Student: ");
             newStudent = input.nextLine();
 
             if (!newStudent.equals("")) {
