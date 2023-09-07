@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Menu {
 private ArrayList<MenuItem> menuItems = new ArrayList<>();
-private LocalDate LastUpdated;
+//private LocalDate LastUpdated;
 
 //Allow for default constructor
 
