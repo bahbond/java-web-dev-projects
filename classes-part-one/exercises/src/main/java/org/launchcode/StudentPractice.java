@@ -6,5 +6,8 @@ public class StudentPractice {
         Student abond = new Student("Andrew Bond", 8888718, 1, 4.0);
         System.out.println(abond.getName());
         System.out.println(abond.getStudentId());
+        System.out.println(abond.getNumberOfCredits());
+        System.out.println(abond.getGpa());
+        System.out.println(abond);
     }
 }

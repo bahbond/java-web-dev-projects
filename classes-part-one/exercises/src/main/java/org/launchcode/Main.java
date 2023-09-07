@@ -10,5 +10,6 @@ public class Main {
         otherDog.name ="Shadow";
         otherDog.breed ="Black Labrador";
         otherDog.info();
+
     }
 }
