@@ -1,6 +1,7 @@
 package org.launchcode;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class MenuItem {
     private String name;
@@ -8,16 +9,16 @@ public class MenuItem {
     private double price;
     private String category;
     private final LocalDate dateAdded;
-    private boolean isNew = false;
-    private boolean isAvailable = true;
+
 
     public MenuItem(String name, String description, double price, String category) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.category = category;
-        this.isAvailable = true;
         this.dateAdded = LocalDate.now();
+        //test isNew() to be false
+       // this.dateAdded = LocalDate.parse("2022-05-20");
     }
 
     public String getName() {
@@ -56,7 +57,36 @@ public class MenuItem {
         return dateAdded;
     }
 
-    public boolean isAvailable() {
-        return isAvailable;
+
+    // SPECIAL METHODS
+
+    //TODO: Define Custom toString() method
+    @Override
+    public  String toString(){
+        String newText = isNew() ? " - NEW!" : "";
+        return name + newText + "\n" + description + " | $" + price;
+    }
+
+
+    //TODO: Define custom equals() method
+    @Override
+    public boolean equals(Object toBeCompared) {
+        if (this == toBeCompared) {
+            return true;
+        }
+        if (toBeCompared == null) {
+            return false;
+        }
+        if (getClass() != toBeCompared.getClass()) {
+            return false;
+        }
+        MenuItem otherItem = (MenuItem) toBeCompared;
+        return this.name.equals(otherItem.getName());
+    }
+    //TODO: Define instance method isNew()
+    boolean isNew(){
+        LocalDate today = LocalDate.now();
+        double daysBetween = getDateAdded().until(today, ChronoUnit.DAYS);
+        return daysBetween < 90;
     }
 }
