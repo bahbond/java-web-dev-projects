@@ -4,7 +4,7 @@ public class Temperature {
 
     private double fahrenheit;
 
-    private static double absoluteZeroFahrenheit = -459.67;
+    private static final double absoluteZeroFahrenheit = -459.67;
 
     public double getFahrenheit() {
         return fahrenheit;
